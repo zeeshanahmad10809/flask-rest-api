@@ -1,0 +1,9 @@
+# ignore all pycache files...
+__pycache__/
+
+# ignore eidtor files
+.vscode/
+.idea/
+
+# ignore venv files
+venv/
