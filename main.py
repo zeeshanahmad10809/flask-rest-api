@@ -16,11 +16,11 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "thisissecret"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Sample.db"
 app.config["UPLOADED_PHOTOS_DEST"] = "uploads"
+photos = UploadSet("photos", IMAGES)
 configure_uploads(app, photos)
 
 db = SQLAlchemy(app)
 db.create_all()
-photos = UploadSet("photos", IMAGES)
 
 
 class User(db.Model):
